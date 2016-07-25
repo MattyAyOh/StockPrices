@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Stock Prices" Height="350" Width="525">
     <Grid>
-        <TextBox Margin="222,146,221.4,149.8" Text="Hello, Matt!" BorderBrush="Transparent">
-    
+        <TextBox Margin="10,10,463.4,285.8" Text="Stock" BorderBrush="Transparent">
+        </TextBox>
+        <TextBox Text="Price" Margin="87,10,391.4,285.8" BorderBrush="Transparent">
         </TextBox>
     </Grid>
 </Window>
