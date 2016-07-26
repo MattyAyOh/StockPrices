@@ -1,2 +1,2 @@
 # StockPrices
-Repository for learning some basics of Github and C#/WPF development
+Repository for learning some basics of GitHub and C#/WPF development
