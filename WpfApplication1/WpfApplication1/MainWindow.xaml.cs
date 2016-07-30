@@ -91,7 +91,7 @@ namespace WpfApplication1
                 HttpResponseMessage response = client.GetAsync( "quotes.csv?s=" + strTickerSymbol + "&f=price" ).Result;
                 response.EnsureSuccessStatusCode();
                 result = response.Content.ReadAsStringAsync().Result;
-                string[] temp = result.Split( ';' );
+                string[] temp = result.Split( ',' );
                 result = temp[0];
             }
             return result;
