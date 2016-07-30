@@ -69,12 +69,14 @@ namespace WpfApplication1
         {
             InitializeComponent();
 
-            BindInXaml();
+            PopulateStockPrices();
         }
 
-        private void BindInXaml()
+        private void PopulateStockPrices()
         {
-            base.DataContext = new StockItem { strStockName = "Msft", strStockPrice = "56.21" };
+            string strTempPrice = GetStockPrice( "msft" );
+
+            base.DataContext = new StockItem { strStockName = "Msft", strStockPrice = strTempPrice };
         }
 
         public string GetStockPrice( string strTickerSymbol )
