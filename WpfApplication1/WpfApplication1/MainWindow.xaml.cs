@@ -28,18 +28,18 @@ namespace WpfApplication1
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private string _strStockName = "Msft";
-        private string _strStockPrice = "56.21";
+        private string _strStockName = "";
+        private string _strStockPrice = "";
 
         public string strStockName
         {
             get { return _strStockName; }
             set
             {
-                if( value != _strStockName )
+                if ( value != _strStockName )
                 {
                     _strStockName = value;
-                    OnPropertyChanged("strStockName");
+                    OnPropertyChanged( "strStockName" );
                 }
             }
         }
@@ -49,23 +49,29 @@ namespace WpfApplication1
             get { return _strStockPrice; }
             set
             {
-                if (value != _strStockPrice)
+                if ( value != _strStockPrice )
                 {
                     _strStockPrice = value;
-                    OnPropertyChanged("strStockPrice");
+                    OnPropertyChanged( "strStockPrice" );
                 }
             }
         }
 
-        private void OnPropertyChanged( string v )
+        protected void OnPropertyChanged( string name )
         {
-            throw new NotImplementedException();
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if ( handler != null )
+            {
+                handler( this, new PropertyChangedEventArgs( name ) );
+            }
         }
 
         public MainWindow()
         {
             InitializeComponent();
 
+            strStockName = "Msft";
+            strStockPrice = "56.21";
         }
 
         public string GetStockPrice( string strTickerSymbol )
