@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +25,25 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        public string GetStockPrice( string strTickerSymbol )
+        {
+            string result = "";
+
+            using( var client = new HttpClient( new HttpClientHandler { AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate }))
+            {
+                // sample yahoo finance request syntax: http://finance.yahoo.com/d/quotes.csv?s=msft&f=price
+                // sample response content: 56.21,26.99,N/A,"+0.47 - +0.84%",2.10
+                client.BaseAddress = new Uri( "http://finance.yahoo.com/d/" );
+                HttpResponseMessage response = client.GetAsync( "quotes.csv?s=" + strTickerSymbol + "&f=price" ).Result;
+                response.EnsureSuccessStatusCode();
+                result = response.Content.ReadAsStringAsync().Result;
+                string[] temp = result.Split( ';' );
+                result = temp[0];
+            }
+            return result;
         }
     }
 }

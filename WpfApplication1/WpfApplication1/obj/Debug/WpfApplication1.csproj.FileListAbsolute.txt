@@ -26,3 +26,17 @@ C:\Projects\Test\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.baml
 C:\Projects\Test\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.g.resources
 C:\Projects\Test\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.Properties.Resources.resources
 C:\Projects\Test\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csproj.GenerateResource.Cache
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.exe.config
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.exe
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.pdb
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.exe
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.pdb
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csprojResolveAssemblyReference.cache
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.g.cs
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\obj\Debug\App.g.cs
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1_MarkupCompile.cache
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1_MarkupCompile.lref
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.baml
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.g.resources
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.Properties.Resources.resources
+C:\Projects\StockPrices\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csproj.GenerateResource.Cache
