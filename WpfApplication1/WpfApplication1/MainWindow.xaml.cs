@@ -18,14 +18,8 @@ using System.Windows.Shapes;
 
 namespace WpfApplication1
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public class StockItem
     {
-        //public string strStockName { get; set; }
-        //public string strStockPrice { get; set; }
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         private string _strStockName = "";
@@ -36,7 +30,7 @@ namespace WpfApplication1
             get { return _strStockName; }
             set
             {
-                if ( value != _strStockName )
+                if ( value != _strStockName)
                 {
                     _strStockName = value;
                     OnPropertyChanged( "strStockName" );
@@ -65,13 +59,22 @@ namespace WpfApplication1
                 handler( this, new PropertyChangedEventArgs( name ) );
             }
         }
-
+    }
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
         public MainWindow()
         {
             InitializeComponent();
 
-            strStockName = "Msft";
-            strStockPrice = "56.21";
+            BindInXaml();
+        }
+
+        private void BindInXaml()
+        {
+            base.DataContext = new StockItem { strStockName = "Msft", strStockPrice = "56.21" };
         }
 
         public string GetStockPrice( string strTickerSymbol )

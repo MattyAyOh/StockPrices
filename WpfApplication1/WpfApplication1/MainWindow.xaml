@@ -11,9 +11,9 @@
         </TextBox>
         <TextBox Text="Price" Margin="87,10,391.4,285.8" BorderBrush="Transparent">
         </TextBox>
-        <TextBox Text="{Binding Path=strStockName}" Margin="10,35,463.4,267.8" BorderBrush="Transparent">
+        <TextBox Text="{Binding Path=strStockName, UpdateSourceTrigger=PropertyChanged}" Margin="10,35,463.4,250.8" BorderBrush="Transparent">
         </TextBox>
-        <TextBox Text="{Binding Path=strStockPrice}" Margin="87,35,391.4,267.8" BorderBrush="Transparent">
+        <TextBox Text="{Binding Path=strStockPrice, UpdateSourceTrigger=PropertyChanged}" Margin="87,35,391.4,250.8" BorderBrush="Transparent">
         </TextBox>
     </Grid>
 </Window>
